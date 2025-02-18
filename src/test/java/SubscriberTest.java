@@ -9,7 +9,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class SubscriberTest {
     private List<Map<String, String>> csvData;
@@ -24,7 +25,7 @@ class SubscriberTest {
     @Test
     void testBuildSubscriberFromMapType2() {
         Map<String, String> data = csvData.stream()
-                .filter(row -> "1".equals(row.get("\uFEFF№ строки")))
+                .filter(row -> "1".equals(row.get("№ строки")))
                 .findFirst()
                 .orElse(null);
         assertNotNull(data, "Строка с номером 1 не найдена: № строки");
@@ -44,7 +45,7 @@ class SubscriberTest {
     @Test
     void testBuildSubscriberFromMapType1() {
         Map<String, String> data = csvData.stream()
-                .filter(row -> "2".equals(row.get("\uFEFF№ строки")))
+                .filter(row -> "2".equals(row.get("№ строки")))
                 .findFirst()
                 .orElse(null);
         assertNotNull(data, "Строка с номером 2 не найдена");

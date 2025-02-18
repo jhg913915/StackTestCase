@@ -11,9 +11,9 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class CsvSubscriberFormatter implements Formatter {
-
     private static final String OUTPUT_FILE_PATH = "src/test/resources/fixtures/output/Начисления_абоненты.csv";
-    private static final String CSV_HEADER = "№ строки;Фамилия;Улица;№ дома;№ Квартиры;Тип начисления;Предыдущее;Текущее;Начислено";
+    private static final String CSV_HEADER =
+            "№ строки;Фамилия;Улица;№ дома;№ Квартиры;Тип начисления;Предыдущее;Текущее;Начислено";
 
     @Override
     public void format(List<Subscriber> subscribers) throws IOException {

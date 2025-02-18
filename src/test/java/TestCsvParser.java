@@ -22,7 +22,7 @@ public class TestCsvParser {
         assertEquals(29, result.size());
         assertEquals("Абаимов", firstRow.get("Фамилия"));
         assertEquals("Ленина", firstRow.get("Улица"));
-        assertEquals("1", firstRow.get("\uFEFF№ строки"));
+        assertEquals("1", firstRow.get("№ строки"));
         assertEquals("470", firstRow.get("Текущее"));
         assertEquals("Багин", fifthRow.get("Фамилия"));
         assertEquals("Пушкина", fifthRow.get("Улица"));

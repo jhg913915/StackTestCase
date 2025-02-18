@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    checkstyle
 }
 
 group = "stack.code"
@@ -10,11 +11,11 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation(platform("org.junit:junit-bom:5.11.2"))
     testImplementation("org.junit.jupiter:junit-jupiter")
-    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.2.3")
-    compileOnly("org.projectlombok:lombok:1.18.30")
-    annotationProcessor("org.projectlombok:lombok:1.18.30")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.17.2")
+    compileOnly("org.projectlombok:lombok:1.18.34")
+    annotationProcessor("org.projectlombok:lombok:1.18.34")
 }
 
 tasks.test {

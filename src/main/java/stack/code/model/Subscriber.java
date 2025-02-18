@@ -7,7 +7,7 @@ import java.util.Map;
 
 @AllArgsConstructor
 @Getter
-public class Subscriber {
+public final class Subscriber {
     private final int row;
     private final String surname;
     private final String street;
@@ -36,7 +36,7 @@ public class Subscriber {
         double currentSum = Double.parseDouble(data.get("Текущее"));
         try {
             return new Subscriber.SubscriberBuilder()
-                    .row(Integer.parseInt(data.get("\uFEFF№ строки")))
+                    .row(Integer.parseInt(data.get("№ строки")))
                     .surname(data.get("Фамилия"))
                     .street(data.get("Улица"))
                     .houseAddress(data.get("№ дома"))
@@ -70,48 +70,48 @@ public class Subscriber {
         private double currentSum;
         private double absoluteSum;
 
-        public SubscriberBuilder row(int row) {
-            this.row = row;
+        public SubscriberBuilder row(int newRow) {
+            this.row = newRow;
             return this;
         }
 
-        public SubscriberBuilder surname(String surname) {
-            this.surname = surname;
+        public SubscriberBuilder surname(String newSurname) {
+            this.surname = newSurname;
             return this;
         }
 
-        public SubscriberBuilder street(String street) {
-            this.street = street;
+        public SubscriberBuilder street(String newStreet) {
+            this.street = newStreet;
             return this;
         }
 
-        public SubscriberBuilder houseAddress(String houseAddress) {
-            this.houseAddress = houseAddress;
+        public SubscriberBuilder houseAddress(String newHouseAddress) {
+            this.houseAddress = newHouseAddress;
             return this;
         }
 
-        public SubscriberBuilder apartmentNumber(int apartmentNumber) {
-            this.apartmentNumber = apartmentNumber;
+        public SubscriberBuilder apartmentNumber(int newApartmentNumber) {
+            this.apartmentNumber = newApartmentNumber;
             return this;
         }
 
-        public SubscriberBuilder sumType(int sumType) {
-            this.sumType = sumType;
+        public SubscriberBuilder sumType(int newSumType) {
+            this.sumType = newSumType;
             return this;
         }
 
-        public SubscriberBuilder previousSum(double previousSum) {
-            this.previousSum = previousSum;
+        public SubscriberBuilder previousSum(double newPreviousSum) {
+            this.previousSum = newPreviousSum;
             return this;
         }
 
-        public SubscriberBuilder currentSum(double currentSum) {
-            this.currentSum = currentSum;
+        public SubscriberBuilder currentSum(double newCurrentSum) {
+            this.currentSum = newCurrentSum;
             return this;
         }
 
-        public SubscriberBuilder absoluteSum(double absoluteSum) {
-            this.absoluteSum = absoluteSum;
+        public SubscriberBuilder absoluteSum(double newAbsoluteSum) {
+            this.absoluteSum = newAbsoluteSum;
             return this;
         }
 

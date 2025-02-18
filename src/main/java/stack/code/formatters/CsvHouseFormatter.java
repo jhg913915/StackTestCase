@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class CsvHouseFormatter implements Formatter{
+public class CsvHouseFormatter implements Formatter {
     private static final String OUTPUT_FILE_PATH = "src/test/resources/fixtures/output/Начисления_дома.csv";
     private static final String CSV_HEADER = "№ строки;Улица;№ дома;Начислено";
 
