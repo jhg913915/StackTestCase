@@ -28,6 +28,7 @@ class SubscriberTest {
                 .filter(row -> "1".equals(row.get("№ строки")))
                 .findFirst()
                 .orElse(null);
+
         assertNotNull(data, "Строка с номером 1 не найдена: № строки");
 
         Subscriber subscriber = Subscriber.buildSubscriberFromMap(data);
@@ -48,6 +49,7 @@ class SubscriberTest {
                 .filter(row -> "2".equals(row.get("№ строки")))
                 .findFirst()
                 .orElse(null);
+
         assertNotNull(data, "Строка с номером 2 не найдена");
 
         Subscriber subscriber = Subscriber.buildSubscriberFromMap(data);
