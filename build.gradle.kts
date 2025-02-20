@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    application
     checkstyle
 }
 
@@ -21,4 +22,8 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+application {
+    mainClass = "stack.code.App"
 }
